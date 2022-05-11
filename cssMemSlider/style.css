@@ -13,8 +13,11 @@
 .slider-screen{
     width: 900px;
     height: 580px;
-    overflow: hidden;
     border-radius: 10px;
+    overflow: hidden;
+    /* transform-origin: center center;
+    transform: scale(1);
+    scroll-snap-align: center; */
 }
 .slider-wrapper{
     display: flex;
@@ -32,10 +35,27 @@
     align-items: center;
     width: 900px;
     height: 50px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family:Georgia, 'Times New Roman', Times, serif;
     font-size: 16px;
     background-color:darkgrey;
 }
 .slide-text > span{
     display: inline-block;
+}
+.buttons-slider{
+display: flex;
+}
+.button{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: crimson;
+    margin: 5px;
+    opacity: 0.7;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+.button:hover{
+    opacity: 1;
+    transform: scale(1.2);
 }
