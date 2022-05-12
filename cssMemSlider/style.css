@@ -1,6 +1,8 @@
 .body{
     width: 100vw;
     height: 100vh;
+    margin: 0;
+    overflow: hidden;
 }
 .body-wrapper{
     width: 100%;
@@ -10,17 +12,24 @@
     justify-content: center;
     align-items: center;
 }
+.content-wrapper{
+    box-sizing: content-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
 .slider-screen{
-    width: 900px;
-    height: 600px;
+    width: 68.7%;
     border-radius: 10px;
+    box-sizing: content-box;
     overflow: hidden;
 }
 .slider-wrapper{
     width: 400%;
     height: 100%;
     display: flex;
-
 }
 .slide{
     width: 25%;
@@ -28,8 +37,6 @@
 }
 .slide > img {
     width: 100%;
-    height: 100%;
-    height: 530px;
     display: flex;
     flex-direction: column;
 }
@@ -37,24 +44,25 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 900px;
-    height: 50px;
+    width: 100%;
+    box-sizing: content-box;
     font-family: 'Koulen', cursive;
-    font-size: 16px;
+    font-size: 1em;
     background-color:darkgrey;
 }
 .slide-text > span{
     display: inline-block;
 }
 .buttons-slider{
-display: flex;
+    display: flex;
+    box-sizing: content-box;
 }
 .button{
-    width: 10px;
-    height: 10px;
+    width: 0.7rem;
+    height: 0.7rem;
     border-radius: 50%;
     background-color: crimson;
-    margin: 5px;
+    margin: 0.3rem;
     opacity: 0.7;
     transition: all 0.3s ease;
     cursor: pointer;
@@ -70,10 +78,10 @@ display: flex;
 input[name="radio-button"]{
     visibility: hidden;
 }
-#slide1:checked ~ .dot{
+#slide1:checked .dot{
     margin-left: 0;
 }
-#slide2:checked ~ .dot{
+#slide2:checked .dot{
     margin-left: -25%;
 }
 #slide3:checked ~ .dot{
@@ -81,4 +89,16 @@ input[name="radio-button"]{
 }
 #slide4:checked ~ .dot{
     margin-left: -75%;
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+    .body-wrapper{
+        width: 100%;
+        height: 100%;
+    }
+}
+@media screen and (min-width: 320px) and (max-width: 767px) {
+    .body-wrapper{
+        width: 100%;
+        height: 100%;
+    }
 }
